@@ -1,0 +1,12 @@
+{
+  "name": "servidor-ramon-3103",
+  "version": "1.0.0",
+  "description": "Aula 31/03",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node script.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
