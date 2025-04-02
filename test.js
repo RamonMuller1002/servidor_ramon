@@ -1,5 +1,10 @@
-function ferrari (a , b, c){
-    return a + b + c
-}
+function soma (a , b){
+    return a + b
+};
 
-module.exports = { ferrari }
+function subtracao(a , b){
+    return a - b
+};
+
+module.exports = { subtracao },
+module.exports = { soma }
