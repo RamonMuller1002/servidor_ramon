@@ -6,5 +6,4 @@ function subtracao(a , b){
     return a - b
 };
 
-module.exports = { subtracao },
-module.exports = { soma }
+module.exports = { soma , subtracao }
