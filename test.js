@@ -1,9 +1,7 @@
-function soma (a , b){
-    return a + b
+export function soma (a , b){
+    return Number(a) + Number(b)
 };
 
-function subtracao(a , b){
-    return a - b
+export function subtracao(a , b){
+    return Number(a) - Number(b)
 };
-
-module.exports = { soma , subtracao }

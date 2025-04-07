@@ -5,9 +5,12 @@ import express from 'express'
 */
 // const http = require('http')
 // const url = require('url')
-const { soma, subtracao } = require('./test.js') 
-const express = require('express')       
-const { conversoes } = require('conversoes-ramon-3b-rm')    
+
+
+import { soma, subtracao } from './test.js';
+
+import express from 'express'   
+import conversoes  from 'conversoes-ramon-3b-rm'   
 
 
 const server = express()
