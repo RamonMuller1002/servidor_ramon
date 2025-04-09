@@ -1,29 +1,36 @@
-function ligarFogao(callback){
-    console.log(`Ligando Fogão`)
-    setTimeout(callback, 1000)
+function ligarFogao() {
+    return new Promise((resolve, reject) => {
+        console.log(`Ligando Fogão`)
+        setTimeout(resolve, 1000)
+    })
+
 }
-function ferverAgua(callback){
-    console.log(`Fervendo a água`)
-    setTimeout(callback, 2000)
+function ferverAgua() {
+    return new Promise((resolve, reject) => {
+        console.log(`Fervendo agua`)
+        setTimeout(resolve, 2000)
+    })
 }
-function colocarMacarrao(callback){
-    console.log(`Colocando macarrão`)
-    setTimeout(callback, 3000)
+function colocarMacarrao() {
+    return new Promise((resolve, reject) => {
+        console.log(`Colocar macarrao`)
+        setTimeout(resolve, 3000)
+    })
 }
-function escorrer(callback){
-    console.log(`Escorrendo macarrão`)
-    setTimeout(callback, 4000)
+function escorrer() {
+    return new Promise((resolve, reject) => {
+        console.log(`Servindo`)
+        setTimeout(resolve, 4000)
+    })
 }
-function servir(){
-    setTimeout(()=>{console.log(`Servindo a mesa`)}, 5000)
+function servir() {
+    setTimeout(() => { console.log(`Servindo a mesa`) }, 5000)
 }
 
-ligarFogao(()=>{
-    ferverAgua(()=>{
-        colocarMacarrao(()=>{
-            escorrer(()=>{
-                servir()
-            })
-        })
-    })
-})
+ligarFogao()
+    .then(() => ferverAgua())
+    .then(() => colocarMacarrao())
+    .then(() => escorrer())
+    .then(() => servir())
+    .then(() => console.log('Processo completo'))
+    .catch((erro) => console.log(erro))
